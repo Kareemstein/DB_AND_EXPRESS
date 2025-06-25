@@ -13,7 +13,7 @@ function createDBConnection() {
       password: process.env.LOCAL_DB_PASSWORD,
       port: process.env.LOCAL_DB_PORT,
     });
-  } else if (environment === 'renderdb') {
+  } else if (environment === 'production' || environment === 'renderdb') {
     pool = new Pool({
       user: process.env.REMOTE_DB_USER,
       host: process.env.REMOTE_DB_HOST,
