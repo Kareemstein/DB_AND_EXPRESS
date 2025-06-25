@@ -16,7 +16,7 @@ app.get('/users', async (req, res) => {
   }
 });
 
-app.get('/fake/users', (req, res) =>{
+app.get('/fake/users2', (req, res) =>{
   const fakeUsers = [
     { id: 1, name: 'John Doe', email: 'john.doe@example.com' },
     { id: 2, name: 'Jane Smith', email: 'jane.smith@example.com' },
