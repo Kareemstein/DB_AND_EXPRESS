@@ -2,7 +2,7 @@ const { Pool } = require('pg');
 require('dotenv').config(); // Load environment variables from .env
 
 function createDBConnection() {
-  const environment = process.env.NODE_ENV || 'localdb';
+  const environment = process.env.NODE_ENV || 'renderdb';
   let pool;
 
   if (environment === 'localdb') {
