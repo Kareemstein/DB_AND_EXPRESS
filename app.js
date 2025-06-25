@@ -1,8 +1,10 @@
 const express = require('express');
-const createDBConnection = require('./db');
-
 const app = express();
 app.use(express.json());
+
+const createDBConnection = require('./db');
+
+
 
 const PORT = process.env.PORT || 5001;
 const pool = createDBConnection();
