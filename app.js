@@ -1,14 +1,14 @@
 const express = require('express');
-const createDBConnection = require('./db');
-
 const app = express();
 app.use(express.json());
 
-const PORT = process.env.PORT || 5001;
+const createDBConnection = require('./db');
 
-// Move this line AFTER defining pool
+
+
+const PORT = process.env.PORT || 5001;
 const pool = createDBConnection();
-console.log("Pool is:", pool); // ✅ Now this will work
+
 
 app.get('/users', async (req, res) => {
   try {

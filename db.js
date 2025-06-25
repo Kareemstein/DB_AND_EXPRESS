@@ -13,7 +13,7 @@ function createDBConnection() {
       password: process.env.LOCAL_DB_PASSWORD,
       port: process.env.LOCAL_DB_PORT,
     });
-  } else if (environment === 'production' || environment === 'renderdb') {
+  } else if (environment === 'renderdb') {
     pool = new Pool({
       user: process.env.REMOTE_DB_USER,
       host: process.env.REMOTE_DB_HOST,
@@ -22,7 +22,7 @@ function createDBConnection() {
       port: process.env.REMOTE_DB_PORT,
       ssl: { rejectUnauthorized: false },
     });
-  } else if (environment === 'clouddb') {
+  } else if (environment === 'production') {
     pool = new Pool({
       user: process.env.DB_USER,
       host: process.env.DB_HOST,
