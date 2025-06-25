@@ -1,7 +1,5 @@
 const express = require('express');
 const createDBConnection = require('./db');
-console.log("Environment:", process.env.NODE_ENV); 
-console.log("Pool is:", pool); 
 
 const app = express();
 app.use(express.json());
