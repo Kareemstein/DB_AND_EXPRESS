@@ -22,7 +22,7 @@ function createDBConnection() {
       port: process.env.REMOTE_DB_PORT,
       ssl: { rejectUnauthorized: false },
     });
-  } else if (environment === 'production') {
+  } else if (environment === 'production' ||environment === 'clouddb') {
     pool = new Pool({
       user: process.env.DB_USER,
       host: process.env.DB_HOST,
